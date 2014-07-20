@@ -20,7 +20,7 @@ $("#submit").click(function(){
           
          	console.log(lat,lng)            
 
-         	window.location = "map/index.php?lat=" + lat + "&lng=" + lng + "&location=" + address;
+         	window.location = "map/index.php?lat=" + lat + "&lng=" + lng + "&street=" + address;
 
             } 
             else {

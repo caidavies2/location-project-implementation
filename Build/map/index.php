@@ -19,22 +19,22 @@ near to your specific location in an instant -->
     <script src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places"></script>
         
         <script>
-        var map;
+//         var map;
 
-function initialize() {
-        var mapOptions = {
-          center: new google.maps.LatLng(50.375456, -4.142656),
-          zoom: 8,
-          panControl: false,
+// function initialize() {
+//         var mapOptions = {
+//           center: new google.maps.LatLng(50.375456, -4.142656),
+//           zoom: 8,
+//           panControl: false,
 
-          zoomControlOptions: {
-            position: google.maps.ControlPosition.TOP_RIGHT
-          }
-        };
-        var map = new google.maps.Map(document.getElementById("map"),
-            mapOptions);
-      }
-      google.maps.event.addDomListener(window, 'load', initialize);
+//           zoomControlOptions: {
+//             position: google.maps.ControlPosition.TOP_RIGHT
+//           }
+//         };
+//         var map = new google.maps.Map(document.getElementById("map"),
+//             mapOptions);
+//       }
+//       google.maps.event.addDomListener(window, 'load', initialize);
       </script>
         
         <!-- Hammer reload -->
@@ -69,7 +69,38 @@ function initialize() {
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
+<?php
 
+$lat = $_GET["lat"];
+$lng = $_GET["lng"];
+$street = $_GET["street"];
+// echo $street;
+?>
+
+<script type="text/javascript">
+    var lat = "<?php echo $lat; ?>";
+    var lng = "<?php echo $lng; ?>";
+    var street = "<?php echo $street; ?>";
+    console.log(lat);
+   console.log(lng);    
+   console.log(street);
+   var map;
+
+function initialize() {
+        var mapOptions = {
+          center: new google.maps.LatLng(lat, lng),
+          zoom: 17,
+          panControl: false,
+
+          zoomControlOptions: {
+            position: google.maps.ControlPosition.TOP_RIGHT
+          }
+        };
+        var map = new google.maps.Map(document.getElementById("map"),
+            mapOptions);
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+</script>
 
 <header class="header-map">
 <div class="header-container">
@@ -104,6 +135,20 @@ function initialize() {
 	<a class="venue-website" href="www.jacobspickles.com">www.jacobspickles.com</a>
 </li>
 
+<li class="clearfix">
+	<img class="venue-image" src="../img/map/venue-1.jpg" width="110" height="110">
+	<article class="venue-description">
+		<h1>Jacob's Pickles</h1>
+		<p>
+		Celeste is a cash only family-owned Italian restaurant where the pasta is made fresh daily. The chef goes to Italy every month to hand-pick several local and hard-to-come-by cheeses.
+		</p>
+	</article>
+	<span class="venue-rating">
+			9.5
+		</span>
+
+	<a class="venue-website" href="www.jacobspickles.com">www.jacobspickles.com</a>
+</li>
 
 </ul>
 

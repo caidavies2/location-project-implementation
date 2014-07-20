@@ -117,7 +117,7 @@ Home Page
 {
     position: absolute;
     top: 0; right: 0; bottom: 0; left: 0;
-    background: url(home-bg.jpg) 0 0 no-repeat;
+    background: url(home-bg.jpg) 0 0 no-repeat #000;
     background-size:cover;
 }
 
@@ -361,18 +361,27 @@ RESULTS
     bottom:0; 
 }
 
-.results-inner
-{
-    /*padding:30px 40px;*/
-}
-
 .venue-items
 {
     margin:0;
     padding:0;
     list-style:none;
-    padding: 30px 6.666666666667%;
+}
 
+.venue-items li
+{
+    border-bottom:1px solid #c3ced0;
+    padding: 30px 6.666666666667%;
+    -webkit-transition:all .2s ease;
+    -moz-transition:all .2s ease;
+    -o-transition:all .2s ease;
+    transition:all .2s ease;
+}
+
+.venue-items li:hover
+{
+    /*cursor:pointer;*/
+    background:#f2fbff;
 }
 
 .venue-items li .venue-description
@@ -398,6 +407,7 @@ RESULTS
     font-weight:400;
     color:#9a9ca5;
     font-size:.9em;
+    margin-bottom:0;
 
 }
 
@@ -432,7 +442,17 @@ RESULTS
 {
     color:#1e1e1e;
     text-decoration:underline;
+    float:right;
+    -webkit-transition:all .2s ease;
+    -moz-transition:all .2s ease;
+    -o-transition:all .2s ease;
+    transition:all .2s ease;
+    font-size:.9em;
+}
 
+.venue-items li .venue-website:hover
+{
+    color:#e06409;
 }
 
 /*
