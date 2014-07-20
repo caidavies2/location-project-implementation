@@ -345,6 +345,25 @@ Map
     font-size:1.5em;
 }
 
+
+/*
+
+Loading 
+
+*/
+
+
+#loading
+{
+    z-index:999;
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background:rgba(0,0,0,0.8);
+}
+
 /*
 RESULTS
 */
