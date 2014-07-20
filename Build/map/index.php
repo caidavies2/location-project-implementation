@@ -81,9 +81,6 @@ $street = $_GET["street"];
     var lat = "<?php echo $lat; ?>";
     var lng = "<?php echo $lng; ?>";
     var street = "<?php echo $street; ?>";
-    console.log(lat);
-   console.log(lng);    
-   console.log(street);
    var map;
 
 function initialize() {

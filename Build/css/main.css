@@ -252,7 +252,9 @@ Autocomplete
     background:#eee;
 }
 
-.pac-item:hover
+.pac-item:hover,
+.pac-item:focus,
+.pac-item:active
 {
     cursor:pointer;
     background:#cef2ff;
