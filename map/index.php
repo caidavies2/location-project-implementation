@@ -12,13 +12,11 @@ $street = $_GET["street"];
     var lat = "<?php echo $lat; ?>";
     var lng = "<?php echo $lng; ?>";
     var street = "<?php echo $street; ?>";
-   var map;
+    var map;
 
 </script>
-<div id="loading">
-</div>
 <header class="header-map">
-<div class="header-container">
+<div class="header-container clearfix">
 <h1>NearBy</h1>
 
 <div class="map-cta">		
