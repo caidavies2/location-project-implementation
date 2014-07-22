@@ -81,8 +81,8 @@ $street = $_GET["street"];
     var lng = "<?php echo $lng; ?>";
     var street = "<?php echo $street; ?>";
     var map;
-
 </script>
+
 <header class="header-map">
 <div class="header-container clearfix">
 <h1>NearBy</h1>
@@ -94,10 +94,12 @@ $street = $_GET["street"];
 </div>
 </header>
 
-<div class="map-main-container clearfix">
+<div class="map-main-container clearfix" style="height=100%;">
 
 <section class="results">
 <section class="results-inner">
+	<span class="results-error">
+	<span>
 
 <ul class="venue-items clearfix">
 
@@ -106,9 +108,22 @@ $street = $_GET["street"];
 
 </section>
 </section>
+<div class="venue-controllers">
+<!-- <div class="distance-slider">
+
+</div> -->
+<button id="restaurant" class="active" data-icon="&#xe026;">
+	<span>Food</span>
+</button>
+
+<button id="coffee" class="inactive" data-icon="&#xe016;">
+	<span>Coffee</span>
+</button>
+
+
+</div>
 
 <section id="map">
-
 </section>
 
 </div>
